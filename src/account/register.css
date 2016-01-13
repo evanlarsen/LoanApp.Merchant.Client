@@ -1,0 +1,83 @@
+
+.register-nav-bar{
+  background-color: #fff;
+  color: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 15vmin;
+}
+
+.register-nav-bar > div{
+  height: 100%;
+}
+
+.register-nav-bar .header{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 5.5rem;
+}
+
+.register-header-cancel, .register-header-next{
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 5.5rem;
+  color: gray;
+}
+
+.facebook-login{
+  margin-top: 15vmin;
+  padding-top: 10vmin;
+  padding-bottom: 10vmin;
+  width: 100%;
+  text-align: center;
+}
+.facebook-login button{
+  margin: 0 auto;
+}
+.facebook-login i{
+  padding-right: 8px;
+  padding-left: 4px;
+}
+
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: #3f3f3f;
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 10px;
+}
+
+.strike > span:after {
+    left: 100%;
+    margin-left: 10px;
+}
+
+.register-form{
+  margin-top: 10vmin;
+}

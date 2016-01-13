@@ -1,0 +1,19 @@
+<template>
+  <require from="welcome.css"></require>
+
+  <section class="stage au-animate">
+    <h1 class="welcome-header">${heading | upper}</h2>
+    <h4 class="welcome-sub-header">${subHeading | upper}</h4>
+
+    <div class="welcome-btns">
+      <div class="row">
+        <div class="welcome-btn col-xs-6">
+          <button class="btn btn-default" click.trigger="signin()">SIGN IN</button>
+        </div>
+        <div class="welcome-btn col-xs-6">
+          <button class="btn btn-success" click.trigger="register()">REGISTER</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

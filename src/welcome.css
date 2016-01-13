@@ -1,0 +1,25 @@
+
+.welcome-header, .welcome-sub-header{
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 0px 20px #fff;
+}
+.welcome-header{
+  margin-top: 10vh;
+  font-size: 15vw;
+}
+.welcome-sub-header{
+  margin-top: 2vh;
+  font-size: 3vw;
+}
+
+.welcome-btns{
+  position: absolute;
+  bottom: 25vh;
+  left: 0;
+  right: 0;
+}
+
+.welcome-btn{
+  text-align: center;
+}

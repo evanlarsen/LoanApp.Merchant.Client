@@ -1,0 +1,29 @@
+<template>
+  <require from="account/login.css"></require>
+
+  <section class="stage au-animate">
+    <h2>${heading}</h2>
+    <form role="form" submit.delegate="submit()">
+      <div class="form-group">
+        <label for="fn">email</label>
+        <input type="text" value.bind="username" class="form-control" id="username" placeholder="email">
+      </div>
+      <div class="form-group">
+        <label for="ln">password</label>
+        <input type="password" value.bind="password" class="form-control" id="password" placeholder="password">
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value.bind="rememberMe" id="rememberMe" /> Remember Me
+        </label>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+    <ul class="list-group list-of-actions">
+      <li class="list-group-item"><a href="/#/Register">Register</a></li>
+      <li class="list-group-item"><a href="/#/ForgotPassword">Forgot password</a></li>
+      <li class="list-group-item"><a href="/#/ForgotUsername">Forgot username</a></li>
+    </ul>
+  </section>
+</template>

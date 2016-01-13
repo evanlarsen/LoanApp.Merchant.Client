@@ -1,0 +1,25 @@
+<template>
+  <require from="application/business-information.css"></require>
+
+  <require from="application/business/address"></require>
+  <require from="application/business/legal-name"></require>
+  <require from="application/business/phone-numbers"></require>
+  <require from="application/business/tax-info"></require>
+  <require from="application/business/online-presence"></require>
+  <require from="application/business/mortgage"></require>
+
+  <section class="business-information">
+    <h1>Business Information</h1>
+
+    <legal-name view-model.ref="legalName"></legal-name>
+    <address view-model.ref="address"></address>
+    <phone-numbers view-model.ref="phoneNumbers"></phone-numbers>
+    <tax-info view-model.ref="taxInfo"></tax-info>
+    <online-presence view-model.ref="onlinePresence"></online-presence>
+    <mortgage view-model.ref="mortgage"></mortgage>
+
+    <a click.trigger="next()" class="btn btn-primary">
+      Next <i class="fa fa-arrow-right"></i>
+    </a>
+  </section>
+</template>
