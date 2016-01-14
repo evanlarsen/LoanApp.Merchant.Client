@@ -12,7 +12,7 @@ export class Register {
   }
 
   next(){
-    this.navigationHelper.application.ToBusinessInformation();
+    this.navigationHelper.application.toBusinessInformation();
   }
 
   cancel(){

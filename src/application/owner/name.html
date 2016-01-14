@@ -1,0 +1,15 @@
+<template>
+  <section class="stage au-animate">
+    <div class="form-group">
+      <label for="name">Principal Owner</label>
+      <input value.bind="name" class="form-control" placeholder="Principal Owner:" />
+    </div>
+    <div class="form-group">
+      <label>Title: </span>
+      <label repeat.for="title of titles">
+        <input type="radio" name="clrs" value.bind="title" checked.bind="$parent.title" />
+        ${title}
+      </label>
+    </div>
+  </section>
+</template>

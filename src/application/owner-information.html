@@ -1,0 +1,55 @@
+<template>
+  <require from="application/application-common.css"></require>
+  <require from="application/owner-information.css"></require>
+  <require from="application/owner/name"></require>
+  <require from="application/owner/percent-ownership"></require>
+  <require from="application/common/address"></require>
+  <require from="application/common/phone-numbers"></require>
+  <require from="application/owner/date-of-birth"></require>
+  <require from="application/owner/social-security-number"></require>
+  <require from="application/owner/business-dates"></require>
+  <require from="application/owner/credit-score"></require>
+
+  <section class="application-section">
+    <h1 class="application-header">${header}</h1>
+
+    <h2>Principal (1)</h2>
+    <name view-model.ref="owner1.name"></name>
+    <percent-ownership view-model.ref="owner1.percentOwnership"></percent-ownership>
+    <address view-model.ref="owner1.address"></address>
+    <phone-numbers view-model.ref="owner1.phoneNumbers"></phone-numbers>
+    <date-of-birth view-model.ref="owner1.dateOfBirth"></date-of-birth>
+    <social-security-number view-model.ref="owner1.socialSecurityNumber"></social-security-number>
+    <business-dates view-model.ref="owner1.businessDates"></business-dates>
+
+    <button click.trigger="addPrincipal()" if.bind="!isShowPrincipal2" class="btn btn-default add-principal">
+      <i class="fa fa-plus"></i> Add another principal owner
+    </button>
+
+    <button click.trigger="removePrincipal()" if.bind="isShowPrincipal2" class="btn btn-default remove-principal">
+      <i class="fa fa-minus"></i> Remove second principal owner
+    </button>
+
+    <div class="second-princpal" if.bind="isShowPrincipal2">
+      <h2>Principal (2)</h2>
+      <name view-model.ref="owner2.name"></name>
+      <percent-ownership view-model.ref="owner2.percentOwnership"></percent-ownership>
+      <address view-model.ref="owner2.address"></address>
+      <phone-numbers view-model.ref="owner2.phoneNumbers"></phone-numbers>
+      <date-of-birth view-model.ref="owner2.dateOfBirth"></date-of-birth>
+      <social-security-number view-model.ref="owner2.socialSecurityNumber"></social-security-number>
+      <business-dates view-model.ref="owner2.businessDates"></business-dates>
+    </div>
+
+    <credit-score view-model.ref="creditScore"></credit-score>
+
+    <div class="application-previous-next">
+      <a click.trigger="previous()" class="btn btn-default">
+        <i class="fa fa-arrow-left"></i> Previous
+      </a>
+      <a click.trigger="next()" class="btn btn-success pull-right">
+        Next <i class="fa fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+</template>

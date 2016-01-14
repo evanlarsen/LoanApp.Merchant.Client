@@ -1,0 +1,10 @@
+<template>
+  <section class="stage au-animate">
+    <div class="form-group">
+      <label for="creditScore">Estimated Credit Score</label>
+      <select class="form-control" value.bind="creditScore">
+        <option repeat.for="value of creditScoreOptions" value.bind="value">${value}</option>
+      </select>
+    </div>
+  </section>
+</template>
