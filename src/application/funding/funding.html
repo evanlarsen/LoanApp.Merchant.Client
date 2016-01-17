@@ -1,0 +1,40 @@
+<template>
+  <section class="stage au-animate">
+    <div class="form-group">
+      <label>Desired Amount</label>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-usd fa-fw"></i></span>
+        <input value.bind="desiredAmount" class="form-control" placeholder="Desired Amount" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Minimum Amount</label>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-usd fa-fw"></i></span>
+        <input value.bind="minimumAmount" class="form-control" placeholder="Minimum Amount" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Average Monthly Total Sales</label>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-usd fa-fw"></i></span>
+        <input value.bind="averageMonthlyTotalSales" class="form-control" placeholder="Average Monthly Total Sales" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Average Monthly Visa/Master Card Sales</label>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-usd fa-fw"></i></span>
+        <input value.bind="averageMonthlyCcSales" class="form-control" placeholder="Average Monthly Visa/Master Card Sales" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Proposed Use for Funds</label>
+      <input value.bind="proposedUseForFunds" class="form-control" placeholder="Proposed Use for Funds" />
+    </div>
+    <div class="form-group">
+      <label>Current Processing Company</label>
+      <input value.bind="processingCompany" class="form-control" placeholder="Processing Company" />
+    </div>
+  </section>
+</template>

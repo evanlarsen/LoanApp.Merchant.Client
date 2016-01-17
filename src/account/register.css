@@ -1,4 +1,8 @@
 
+.register.stage{
+  padding-top: 55px;
+}
+
 .register-nav-bar{
   background-color: #fff;
   color: gray;
@@ -31,53 +35,6 @@
   color: gray;
 }
 
-.facebook-login{
-  margin-top: 15vmin;
-  padding-top: 10vmin;
-  padding-bottom: 10vmin;
-  width: 100%;
-  text-align: center;
-}
-.facebook-login button{
-  margin: 0 auto;
-}
-.facebook-login i{
-  padding-right: 8px;
-  padding-left: 4px;
-}
-
-.strike {
-    display: block;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.strike > span {
-    position: relative;
-    display: inline-block;
-}
-
-.strike > span:before,
-.strike > span:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 9999px;
-    height: 1px;
-    background: #3f3f3f;
-}
-
-.strike > span:before {
-    right: 100%;
-    margin-right: 10px;
-}
-
-.strike > span:after {
-    left: 100%;
-    margin-left: 10px;
-}
-
 .register-form{
-  margin-top: 10vmin;
+  margin-top: 12px;
 }

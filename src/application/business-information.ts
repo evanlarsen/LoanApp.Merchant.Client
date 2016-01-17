@@ -9,18 +9,20 @@ import {Mortgage} from 'application/business/mortgage';
 
 @autoinject
 export class BusinessInformation{
-
   header = 'Business Information - Step 1 of 5'
-
-  constructor(private navigationHelper: NavigationHelper){
-  }
-
   address: Address;
   legalName: LegalName;
   phoneNumbers: PhoneNumbers;
   taxInfo: TaxInfo;
   onlinePresence: OnlinePresence;
   mortgage: Mortgage;
+
+  constructor(private navigationHelper: NavigationHelper){
+  }
+
+  attached(){
+    window.scrollTo(0, 0);
+  }
 
   next(){
     this.navigationHelper.application.toOwnerInformation();

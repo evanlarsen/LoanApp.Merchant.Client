@@ -1,0 +1,21 @@
+<template>
+  <require from="application/application-common.css"></require>
+  <require from="application/funding/funding"></require>
+  <require from="application/funding/questions"></require>
+
+  <section class="stage au-animate application-section">
+    <h1 class="application-header">${header}</h1>
+
+    <funding view-model.ref="funding"></funding>
+    <questions view-model.ref="questions"></questions>
+
+    <div class="application-previous-next">
+      <a click.trigger="previous()" class="btn btn-default">
+        <i class="fa fa-arrow-left"></i> Previous
+      </a>
+      <a click.trigger="next()" class="btn btn-success pull-right">
+        Next <i class="fa fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+</template>

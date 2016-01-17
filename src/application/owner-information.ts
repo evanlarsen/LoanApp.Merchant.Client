@@ -43,9 +43,15 @@ export class OwnerInformation{
     this.isShowPrincipal2 = false;
   }
 
-  next(){}
+  next(){
+    this.navigationHelper.application.toFundingRequest();
+  }
 
   previous(){
     this.navigationHelper.application.toBusinessInformation();
+  }
+
+  attached(){
+    window.scrollTo(0, 0);
   }
 }

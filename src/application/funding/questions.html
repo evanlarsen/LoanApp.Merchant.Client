@@ -1,0 +1,26 @@
+<template>
+  <require from="application/funding/yes-no-control"></require>
+
+  <section class="stage au-animate">
+    <div class="form-group">
+      <label>Has Applicant Ever Been in Bankruptcy</label>
+      <yes-no-control value.two-way="hasBeenInBankruptcy"></yes-no-control>
+    </div>
+    <div class="form-group">
+      <label>Does Applicant Have an Open Cash Advances</label>
+      <yes-no-control value.two-way="hasOpenCashAdvances"></yes-no-control>
+    </div>
+    <div class="form-group" if.bind="hasOpenCashAdvances">
+      <label>With Who?</label>
+      <input value.bind="openCashAdvances" class="form-control" placeholder="Open Cash Advances" />
+    </div>
+    <div class="form-group">
+      <label>Any Suits/Judgements/Liens Against Applicant</label>
+      <yes-no-control value.two-way="hasAnySuitsJudgemensLiensAgainstApplicant"></yes-no-control>
+    </div>
+    <div class="form-group" if.bind="hasAnySuitsJudgemensLiensAgainstApplicant">
+      <label>With Who?</label>
+      <input value.bind="suitsJudgementsLiensAgainstApplicant" class="form-control" placeholder="Suits/Judgements/Liens Against Applicant" />
+    </div>
+  </section>
+</template>

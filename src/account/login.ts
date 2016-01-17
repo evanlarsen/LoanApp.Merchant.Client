@@ -11,4 +11,8 @@ export class Login{
     if (this.username === '') { this.errorMessages.push('Username is required.');}
   }
 
+  facebookLogin(){
+    console.log('facebook login');
+  }
+
 }

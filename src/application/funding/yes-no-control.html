@@ -1,0 +1,12 @@
+<template>
+  <div>
+    <label click.trigger="yes()">
+      <i class="fa ${value === true ? 'fa-check-square-o' : 'fa-square-o '}"></i>
+      Yes
+    </label>
+    <label click.trigger="no()" class='yes-no-control-no'>
+      <i class="fa ${value === false ? 'fa-check-square-o' : 'fa-square-o '}"></i>
+      No
+    </label>
+  </div>
+</template>

@@ -1,7 +1,11 @@
 <template>
   <require from="account/register.css"></require>
+  <require from="account/login-with-facebook"></require>
 
-  <section class="stage js-fade-in au-animate">
+  <section class="register stage js-fade-in au-animate">
+    <login-with-facebook login.bind="facebookLogin"></login-with-facebook>
+
+    <h3>${heading}</h3>
     <div class="register-nav-bar row">
       <div class="col-xs-3">
         <a href class="register-header-cancel" click.trigger="cancel()">CANCEL</a>
@@ -14,18 +18,7 @@
       </div>
     </div>
 
-    <div class="facebook-login">
-      <button class="btn btn-primary">
-        <i class="fa fa-facebook"></i>
-        Login with Facebook
-      </button>
-    </div>
-
-    <div class="strike">
-     <span>OR</span>
-    </div>
-
-    <form submit.delegate="submit()" role="form" class="register-form">
+    <form submit.delegate="register()" role="form" class="register-form">
       <div class="form-group">
         <label for="email">Email</label>
         <input type="email" value.bind="email" class="form-control" placeholder="Email" id="email"/>
@@ -38,6 +31,10 @@
         <label for="password">Password</label>
         <input type="password" value.bind="password" class="form-control" placeholder="Password" id="password"/>
       </div>
+
+      <button class="btn btn-success" type="submit">
+        <i class="fa fa-user-plus"></i> Register
+      </button>
     </form>
   </section>
 </template>

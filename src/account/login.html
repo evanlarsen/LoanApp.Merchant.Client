@@ -1,16 +1,25 @@
 <template>
   <require from="account/login.css"></require>
+  <require from="account/login-with-facebook"></require>
 
   <section class="stage au-animate">
-    <h2>${heading}</h2>
+
+    <login-with-facebook login.bind="facebookLogin"></login-with-facebook>
+
     <form role="form" submit.delegate="submit()">
       <div class="form-group">
-        <label for="fn">email</label>
-        <input type="text" value.bind="username" class="form-control" id="username" placeholder="email">
+        <label for="fn">Email</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
+          <input type="text" value.bind="username" class="form-control" id="username" placeholder="email">
+        </div>
       </div>
       <div class="form-group">
-        <label for="ln">password</label>
-        <input type="password" value.bind="password" class="form-control" id="password" placeholder="password">
+        <label for="ln">Password</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+          <input type="password" value.bind="password" class="form-control" id="password" placeholder="password">
+        </div>
       </div>
       <div class="checkbox">
         <label>
@@ -21,9 +30,7 @@
     </form>
 
     <ul class="list-group list-of-actions">
-      <li class="list-group-item"><a href="/#/Register">Register</a></li>
-      <li class="list-group-item"><a href="/#/ForgotPassword">Forgot password</a></li>
-      <li class="list-group-item"><a href="/#/ForgotUsername">Forgot username</a></li>
+      <li class="list-group-item"><a route-href="route: account/register">Dont have an account? Registration Form.</a></li>
     </ul>
   </section>
 </template>

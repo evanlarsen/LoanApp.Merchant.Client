@@ -3,12 +3,20 @@ import {NavigationHelper} from '../infrastructure/navigation-helper';
 
 @autoinject()
 export class Register {
-  heading = 'create an account';
+  heading = 'Create an Account';
   email = '';
   mobile = '';
   password = '';
 
   constructor(private navigationHelper: NavigationHelper){
+  }
+
+  register(){
+    this.navigationHelper.application.toBusinessInformation();
+  }
+
+  facebookLogin(){
+    console.log('facebook login');
   }
 
   next(){
