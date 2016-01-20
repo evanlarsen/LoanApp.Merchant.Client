@@ -1,27 +1,27 @@
 <template>
   <section class="stage au-animate">
     <div class="form-group">
-      <label for="taxId">Tax ID #</label>
-      <input value.bind="taxId" class="form-control" placeholder="Tax ID #:" />
+      <label>Tax ID #</label>
+      <input type="text" value.bind="taxId" class="form-control" placeholder="Tax ID #:" />
     </div>
     <div class="form-group">
-      <label for="taxId">Business Start Date (month/year)</label>
-      <input value.bind="startDate" class="form-control" placeholder="12/2005" />
+      <label>Business Start Date (month/year)</label>
+      <input type="text" value.bind="startDate" class="form-control" placeholder="12/2005" />
     </div>
     <div class="form-group">
-      <label for="lengthOfOwnership">Length of Ownership</label>
-      <input value.bind="lengthOfOwnership" class="form-control" placeholder="Length of Ownership" />
+      <label>Length of Ownership</label>
+      <input type="range" value.bind="lengthOfOwnership" class="form-control" placeholder="Length of Ownership" />
     </div>
     <div class="form-group">
-      <label for="legalEntity">Legal Entity</label>
+      <label>Legal Entity</label>
       <select class="form-control" value.bind="legalEntity">
         <option>Select a Legal Entity</option>
         <option repeat.for="entity of legalEntities" value.bind="entity">${entity}</option>
       </select>
     </div>
     <div class="form-group">
-      <label for="industryType">Industry Type</label>
-      <input value.bind="industryType" class="form-control" placeholder="Industry Type" />
+      <label>Industry Type</label>
+      <input type="text" value.bind="industryType" class="form-control" placeholder="Industry Type" />
     </div>
   </section>
 </template>
