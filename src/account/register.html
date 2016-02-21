@@ -3,9 +3,6 @@
   <require from="account/login-with-facebook"></require>
 
   <section class="register stage js-fade-in au-animate">
-    <login-with-facebook login.bind="facebookLogin"></login-with-facebook>
-
-    <h3>${heading}</h3>
     <div class="register-nav-bar row">
       <div class="col-xs-3">
         <a href class="register-header-cancel" click.trigger="cancel()">CANCEL</a>
@@ -14,9 +11,15 @@
         <span class="header">${heading | upper}</span>
       </div>
       <div class="col-xs-3">
-        <a class="register-header-next" href click.trigger="next()">NEXT</a>
+        <a class="register-header-next" href click.trigger="register()">NEXT</a>
       </div>
     </div>
+
+    <login-with-facebook login.bind="facebookLogin"></login-with-facebook>
+
+    <ul class="validation-summary">
+      <li repeat.for="error of errorMessages">${error}</li>
+    </ul>
 
     <form submit.delegate="register()" role="form" class="register-form">
       <div class="form-group">
@@ -32,8 +35,8 @@
         <input type="password" value.bind="password" class="form-control" placeholder="Password" id="password"/>
       </div>
 
-      <button class="btn btn-success" type="submit">
-        <i class="fa fa-user-plus"></i> Register
+      <button class="btn btn-success" type="submit" disabled.bind="isRegistering">
+        <i class="fa fa-user-plus"></i> Register <i class="fa fa-spinner fa-spin" if.bind="isRegistering"></i>
       </button>
     </form>
   </section>

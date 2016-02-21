@@ -1,4 +1,6 @@
 <template>
+  <require from="application/business/tax-info.css"></require>
+
   <section class="stage au-animate">
     <div class="form-group">
       <label>Tax ID #</label>
@@ -10,7 +12,9 @@
     </div>
     <div class="form-group">
       <label>Length of Ownership</label>
-      <input type="range" value.bind="lengthOfOwnership" class="form-control" placeholder="Length of Ownership" />
+      <output class="slider-output" for="length-of-ownership-slider">${lengthOfOwnership}</output>
+      <span class="slider-output">years</span>
+      <input id="length-of-ownership-slider" type="range" value.bind="lengthOfOwnership" class="form-control" placeholder="Length of Ownership" />
     </div>
     <div class="form-group">
       <label>Legal Entity</label>

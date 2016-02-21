@@ -7,4 +7,14 @@ export class Address{
   city = '';
   state = '';
   zip = '';
+
+  public toJson(){
+    return {
+      address: this.address,
+      suite: this.suite,
+      city: this.city,
+      state: this.state,
+      zip: this.zip
+    };
+  }
 }

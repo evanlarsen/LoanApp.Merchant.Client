@@ -1,2 +1,5 @@
 .list-of-actions { margin-top: 15px; padding: 0;}
 .list-of-actions li { display: block; }
+.validation-summary{
+  color: red;
+}

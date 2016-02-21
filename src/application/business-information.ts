@@ -6,6 +6,7 @@ import {PhoneNumbers} from 'application/common/phone-numbers';
 import {TaxInfo} from 'application/business/tax-info';
 import {OnlinePresence} from 'application/business/online-presence';
 import {Mortgage} from 'application/business/mortgage';
+import {Http, json} from 'infrastructure/http';
 
 @autoinject
 export class BusinessInformation{
@@ -17,7 +18,7 @@ export class BusinessInformation{
   onlinePresence: OnlinePresence;
   mortgage: Mortgage;
 
-  constructor(private navigationHelper: NavigationHelper){
+  constructor(private navigationHelper: NavigationHelper, private http: Http){
   }
 
   attached(){
@@ -25,6 +26,16 @@ export class BusinessInformation{
   }
 
   next(){
+    const obj = {
+      address: this.address.toJson(),
+      legalName: this.legalName.toJson(),
+      phoneNumbers: this.phoneNumbers.toJson(),
+      taxInfo: this.taxInfo.toJson(),
+      onlinePresence: this.onlinePresence.toJson(),
+      mortgage: this.mortgage.toJson()
+    };
+
+    this.http.fetch('')
     this.navigationHelper.application.toOwnerInformation();
   }
 }
