@@ -5,7 +5,7 @@ export class App {
   router: Router;
 
   configureRouter(config: RouterConfiguration, router: Router) {
-    config.title = 'Aurelia';
+    config.title = 'LendiDoe';
     var sitemap = new SiteMap();
     console.log(sitemap.menuItems);
     config.map(sitemap.menuItems);

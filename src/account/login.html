@@ -1,5 +1,4 @@
 <template>
-  <require from="account/login.css"></require>
   <require from="account/login-with-facebook"></require>
 
   <section class="stage au-animate">
@@ -31,7 +30,7 @@
         </label>
       </div>
       <button type="submit" class="btn btn-default" disabled.bind="isLoggingIn">
-        Submit
+        Login
         <i class="fa fa-spinner fa-spin" if.bind="isLoggingIn"></i>
       </button>
 

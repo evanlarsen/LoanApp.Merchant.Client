@@ -42,14 +42,14 @@ export class Register {
   isValid(): boolean{
     this.errorMessages = [];
 
-    if (this.email = ''){
+    if (this.email == ''){
       this.errorMessages.push('Email is required.');
     }
-    if (this.password = ''){
-      this.errorMessages.push('Password is required.');
-    }
-    if (this.mobile = ''){
+    if (this.mobile == ''){
       this.errorMessages.push('Mobile is required.');
+    }
+    if (this.password == ''){
+      this.errorMessages.push('Password is required.');
     }
     return this.errorMessages.length == 0;
   }

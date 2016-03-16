@@ -1,35 +1,19 @@
 export class PageObject_Welcome {
-  getGreeting() {
-    return element(by.tagName('h2')).getText();
+  pressSignInButton() {
+    element(by.css('#sign-in')).click();
+    return browser.waitForRouterComplete();
   }
 
-  setFirstname(value) {
-    let firstName = element(by.valueBind('firstName'));
-    return firstName.clear().then(() => firstName.sendKeys(value));
+  pressRegisterButton(){
+    element(by.css('#register')).click();
+    return browser.waitForRouterComplete();
   }
 
-  setLastname(value) {
-    let lastName = element(by.valueBind('lastName'));
-    return lastName.clear().then(() => lastName.sendKeys(value));
+  getCurrentPageTitle(){
+    return browser.getTitle();
   }
 
-  getFullname() {
-    return element(by.css('.help-block')).getText();
-  }
-
-  pressSubmitButton() {
-    return element(by.css('button[type="submit"]')).click();
-  }
-
-  openAlertDialog() {
-    return browser.wait(() => {
-      this.pressSubmitButton();
-
-      return browser.switchTo().alert().then(
-        // use alert.accept instead of alert.dismiss which results in a browser crash
-        function(alert) { alert.accept(); return true; },
-        function() { return false; }
-      );
-    });
+  getGreeting(){
+    return element(by.css('h4.welcome-sub-header')).getText();
   }
 }
